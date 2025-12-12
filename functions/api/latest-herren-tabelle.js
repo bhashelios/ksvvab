@@ -23,7 +23,7 @@ export async function onRequest() {
   }
 
   if (!best) {
-    return new Response("Keine Tabellen-PDF gefunden.", { status: 404 });
+    return new Response("Keine Herren-Tabellen-PDF gefunden.", { status: 404 });
   }
 
   // Manche Links sind relativ – absolut machen:

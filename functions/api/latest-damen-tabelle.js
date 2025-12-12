@@ -3,7 +3,7 @@ export async function onRequest() {
     "https://www.hkbv-ev.de/classic/landesebene/spielplaene-und-tabellen/saison-25/26/gruppenliga-f-gl1.html";
 
   const res = await fetch(pageUrl, {
-    headers: { "User-Agent": "KSVVAB/1.0 (Cloudflare Pages)" }
+    headers: { "User-Agent": "KSVVAB/1.0 (Cloudflare Pages)" },
   });
 
   if (!res.ok) {
@@ -12,10 +12,10 @@ export async function onRequest() {
 
   const html = await res.text();
 
-  // Match z.B. F-GL1-Tabelle-08Sp.pdf
-  const re = /href="([^"]*F-GL1-Tabelle-(\d+)Sp\.pdf)"/g;
+  // Damen-PDFs heißen z.B. F-GL-1-120-8Sp.pdf
+  const re = /href="([^"]*F-GL-1-120-(\d+)Sp\.pdf)"/gi;
 
-  let best = null;
+  let best = null; // { href, n }
   for (const m of html.matchAll(re)) {
     const href = m[1];
     const n = Number(m[2]);
@@ -23,7 +23,7 @@ export async function onRequest() {
   }
 
   if (!best) {
-    return new Response("Keine Tabellen-PDF gefunden.", { status: 404 });
+    return new Response("Keine Damen-Tabellen-PDF gefunden.", { status: 404 });
   }
 
   const target = best.href.startsWith("http")
