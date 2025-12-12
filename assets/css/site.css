@@ -63,3 +63,26 @@ nav {
   font-size: 14px;
   line-height: 1.5;
 }
+
+/* Bilder immer responsiv */
+img { max-width: 100%; height: auto; display: block; }
+
+/* Mobile Anpassungen */
+@media (max-width: 600px) {
+  .wrap { padding: 12px; }
+  .card { padding: 14px; border-radius: 14px; }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .links {
+    width: 100%;
+    gap: 10px;
+  }
+
+  h1 { font-size: 1.6rem; }
+}
+
