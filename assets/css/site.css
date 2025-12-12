@@ -1,10 +1,12 @@
 :root {
-  --bg:#0b1220;
-  --card:#111b31;
-  --text:#e8eefc;
-  --muted:#b6c2e2;
-  --accent:#7cc4ff;
+  /* Vereinsfarben: Blau / Weiß */
+  --bg: #07162d;        /* sehr dunkles Blau */
+  --card: #0b2550;      /* blaues Panel */
+  --text: #ffffff;      /* Weiß */
+  --muted: #cfe0ff;     /* helles Blau-Weiß */
+  --accent: #4da3ff;    /* Akzent-Blau */
 }
+
 
 * { box-sizing: border-box; }
 
