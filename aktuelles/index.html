@@ -17,7 +17,7 @@
     <div class="card">
       <h1>Aktuelles</h1>
       <p class="small">
-        Hier findest du schnell die wichtigsten Links zu Tabellen, Spielplänen und Livetickern
+        Hier findest du schnell die wichtigsten Links zu Tabellen, Spielplänen und dem Liveticker
         unserer Mannschaften.
       </p>
     </div>
@@ -27,25 +27,18 @@
       <h2>Herren</h2>
       <ul class="linklist">
         <li>
-          <a href="https://www.hkbv-ev.de/classic/landesebene/spielplaene-und-tabellen/saison-25/26/gruppenliga-m-gl1.html"
-             target="_blank" rel="noopener noreferrer">
-            📊 Aktuelle Tabelle
+          <a href="/api/latest-herren-tabelle" target="_blank" rel="noopener noreferrer">
+            📊 Aktuelle Tabelle (automatisch)
           </a>
+          <div class="small hint">
+            Öffnet immer die neueste Tabellen-PDF.
+          </div>
         </li>
         <li>
           <a href="https://www.hkbv-ev.de/fileadmin/inhalte/classic/dokumente/CMM/25_26/Spielplan/M-GL1-120up0109.pdf"
              target="_blank" rel="noopener noreferrer">
             📅 Spielplan
           </a>
-        </li>
-        <li>
-          <a href="https://www.hkbv-ev.de/classic/landesebene/spielplaene-und-tabellen/"
-             target="_blank" rel="noopener noreferrer">
-            🔴 Liveticker
-          </a>
-          <div class="small hint">
-            Hinweis: Auf der Seite bitte Liga → Mannschaft → Spiel auswählen.
-          </div>
         </li>
       </ul>
     </div>
@@ -55,10 +48,12 @@
       <h2>Damen</h2>
       <ul class="linklist">
         <li>
-          <a href="https://www.hkbv-ev.de/classic/landesebene/spielplaene-und-tabellen/saison-25/26/gruppenliga-f-gl1.html"
-             target="_blank" rel="noopener noreferrer">
-            📊 Aktuelle Tabelle
+          <a href="/api/latest-damen-tabelle" target="_blank" rel="noopener noreferrer">
+            📊 Aktuelle Tabelle (automatisch)
           </a>
+          <div class="small hint">
+            Öffnet immer die neueste Tabellen-PDF.
+          </div>
         </li>
         <li>
           <a href="https://www.hkbv-ev.de/fileadmin/inhalte/classic/dokumente/CMM/25_26/Spielplan/F-GL1-120up0109.pdf"
@@ -66,16 +61,27 @@
             📅 Spielplan
           </a>
         </li>
-        <li>
-          <a href="https://www.hkbv-ev.de/classic/landesebene/spielplaene-und-tabellen/"
-             target="_blank" rel="noopener noreferrer">
-            🔴 Liveticker
-          </a>
-          <div class="small hint">
-            Hinweis: Auf der Seite bitte Liga → Mannschaft → Spiel auswählen.
-          </div>
-        </li>
       </ul>
+    </div>
+
+    <!-- Liveticker -->
+    <div class="card section">
+      <h2>🔴 Liveticker</h2>
+      <p>
+        <a href="https://www.hkbv-ev.de/classic/landesebene/spielplaene-und-tabellen/"
+           target="_blank" rel="noopener noreferrer">
+          Zum HKBV Liveticker / Live-Ergebnisse
+        </a>
+      </p>
+      <p class="small">
+        So findest du das richtige Spiel:
+      </p>
+      <ol class="small">
+        <li><strong>Classic</strong> auswählen (falls nicht schon aktiv).</li>
+        <li>Bei <strong>Landesebene</strong> die passende Liga öffnen (z. B. Gruppenliga).</li>
+        <li><strong>Mannschaft</strong> wählen (Herren oder Damen).</li>
+        <li><strong>Spieltag / Begegnung</strong> auswählen → Ergebnisse werden live aktualisiert.</li>
+      </ol>
     </div>
 
   </main>
