@@ -7,7 +7,6 @@
   --accent: #4da3ff;    /* Akzent-Blau */
 }
 
-
 * { box-sizing: border-box; }
 
 body {
@@ -51,6 +50,23 @@ nav {
   flex-wrap: wrap;
 }
 
+/* Menü-Links: besser klickbar (Touch/Handy) */
+.links a {
+  padding: 6px 10px;
+  border-radius: 10px;
+}
+
+.links a:hover {
+  text-decoration: none;
+  background: rgba(255,255,255,.06);
+}
+
+/* Aktiver Menüpunkt (wird per JS gesetzt) */
+.links a.active {
+  background: rgba(77,163,255,.18);
+  border: 1px solid rgba(77,163,255,.35);
+}
+
 .card {
   background: var(--card);
   border: 1px solid rgba(255,255,255,.08);
@@ -85,4 +101,3 @@ img { max-width: 100%; height: auto; display: block; }
 
   h1 { font-size: 1.6rem; }
 }
-
